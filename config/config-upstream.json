@@ -1,0 +1,180 @@
+{
+    "bitbake-config": {
+        "bb-layers": [
+            "openembedded-core/meta",
+            "meta-yocto/meta-yocto-bsp",
+            "meta-yocto/meta-poky"
+        ],
+        "description": "Poky - The Yocto Project testing distribution with internet sstate acceleration. Use with caution as it requires a completely robust local network with sufficient bandwidth.",
+        "name": "poky-with-sstate",
+        "oe-fragment-choices": {
+            "distro": "distro/poky",
+            "machine": "machine/genericarm64"
+        },
+        "oe-fragments": [
+            "core/yocto/sstate-mirror-cdn"
+        ],
+        "oe-fragments-one-of": {
+            "distro": {
+                "description": "Target distributions",
+                "options": [
+                    {
+                        "description": "Yocto Project Reference Distro",
+                        "name": "distro/poky"
+                    },
+                    {
+                        "description": "Poky alternative with systemd as init manager",
+                        "name": "distro/poky-altcfg"
+                    },
+                    {
+                        "description": "Poky alternative optimized for size",
+                        "name": "distro/poky-tiny"
+                    }
+                ]
+            },
+            "machine": {
+                "description": "Target machines",
+                "options": [
+                    {
+                        "description": "x86-64 system on QEMU",
+                        "name": "machine/qemux86-64"
+                    },
+                    {
+                        "description": "ARMv8 system on QEMU",
+                        "name": "machine/qemuarm64"
+                    },
+                    {
+                        "description": "RISC-V system on QEMU",
+                        "name": "machine/qemuriscv64"
+                    },
+                    {
+                        "description": "Arm64 SystemReady IR/ES platforms",
+                        "name": "machine/genericarm64"
+                    },
+                    {
+                        "description": "x86_64 (64-bit) PCs and servers",
+                        "name": "machine/genericx86-64"
+                    }
+                ]
+            }
+        },
+        "setup-dir-name": "$distro-wrynose"
+    },
+    "data": {
+        "bitbake-setup": {
+            "configurations": [
+                {
+                    "bb-layers": [
+                        "openembedded-core/meta",
+                        "meta-yocto/meta-yocto-bsp",
+                        "meta-yocto/meta-poky"
+                    ],
+                    "configurations": [
+                        {
+                            "description": "Poky - The Yocto Project testing distribution",
+                            "name": "poky"
+                        },
+                        {
+                            "description": "Poky - The Yocto Project testing distribution with internet sstate acceleration. Use with caution as it requires a completely robust local network with sufficient bandwidth.",
+                            "name": "poky-with-sstate",
+                            "oe-fragments": [
+                                "core/yocto/sstate-mirror-cdn"
+                            ]
+                        }
+                    ],
+                    "oe-fragments-one-of": {
+                        "distro": {
+                            "description": "Target distributions",
+                            "options": [
+                                {
+                                    "description": "Yocto Project Reference Distro",
+                                    "name": "distro/poky"
+                                },
+                                {
+                                    "description": "Poky alternative with systemd as init manager",
+                                    "name": "distro/poky-altcfg"
+                                },
+                                {
+                                    "description": "Poky alternative optimized for size",
+                                    "name": "distro/poky-tiny"
+                                }
+                            ]
+                        },
+                        "machine": {
+                            "description": "Target machines",
+                            "options": [
+                                {
+                                    "description": "x86-64 system on QEMU",
+                                    "name": "machine/qemux86-64"
+                                },
+                                {
+                                    "description": "ARMv8 system on QEMU",
+                                    "name": "machine/qemuarm64"
+                                },
+                                {
+                                    "description": "RISC-V system on QEMU",
+                                    "name": "machine/qemuriscv64"
+                                },
+                                {
+                                    "description": "Arm64 SystemReady IR/ES platforms",
+                                    "name": "machine/genericarm64"
+                                },
+                                {
+                                    "description": "x86_64 (64-bit) PCs and servers",
+                                    "name": "machine/genericx86-64"
+                                }
+                            ]
+                        }
+                    },
+                    "setup-dir-name": "$distro-wrynose"
+                }
+            ]
+        },
+        "description": "Poky - The Yocto Project testing distribution configurations and hardware test platforms, release 6.0 'wrynose'",
+        "expires": "2030-05-31",
+        "sources": {
+            "bitbake": {
+                "git-remote": {
+                    "branch": "2.18",
+                    "rev": "2.18",
+                    "uri": "https://git.openembedded.org/bitbake"
+                }
+            },
+            "meta-yocto": {
+                "git-remote": {
+                    "branch": "wrynose",
+                    "rev": "wrynose",
+                    "uri": "https://git.yoctoproject.org/meta-yocto"
+                }
+            },
+            "openembedded-core": {
+                "git-remote": {
+                    "branch": "wrynose",
+                    "rev": "wrynose",
+                    "uri": "https://git.openembedded.org/openembedded-core"
+                }
+            },
+            "yocto-docs": {
+                "git-remote": {
+                    "branch": "wrynose",
+                    "rev": "wrynose",
+                    "uri": "https://git.yoctoproject.org/yocto-docs"
+                }
+            }
+        },
+        "version": "1.0"
+    },
+    "name": "poky-wrynose",
+    "non-interactive-cmdline-options": [
+        "poky-wrynose",
+        "poky-with-sstate",
+        "distro/poky",
+        "machine/genericarm64"
+    ],
+    "registry": "/home/py/yocto/bitbake/default-registry",
+    "skip-selection": null,
+    "source-overrides": {
+        "sources": {}
+    },
+    "type": "registry"
+}

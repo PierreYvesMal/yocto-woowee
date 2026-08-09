@@ -1,0 +1,15 @@
+[submodule "layers/meta-yocto"]
+	path = layers/meta-yocto
+	url = https://git.yoctoproject.org/meta-yocto
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = http://git.openembedded.org/meta-openembedded
+[submodule "layers/meta-raspberrypi"]
+	path = layers/meta-raspberrypi
+	url = https://git.yoctoproject.org/meta-raspberrypi
+[submodule "layers/meta-woowee"]
+	path = layers/meta-woowee
+	url = git@github.com:PierreYvesMal/meta-woowee.git
+[submodule "layers/bitbake"]
+	path = layers/bitbake
+	url = https://git.openembedded.org/bitbake

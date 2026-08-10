@@ -5,15 +5,12 @@
             "meta-yocto/meta-yocto-bsp",
             "meta-yocto/meta-poky"
         ],
-        "description": "Poky - The Yocto Project testing distribution with internet sstate acceleration. Use with caution as it requires a completely robust local network with sufficient bandwidth.",
-        "name": "poky-with-sstate",
+        "description": "Poky - The Yocto Project testing distribution",
+        "name": "poky",
         "oe-fragment-choices": {
             "distro": "distro/poky",
             "machine": "machine/genericarm64"
         },
-        "oe-fragments": [
-            "core/yocto/sstate-mirror-cdn"
-        ],
         "oe-fragments-one-of": {
             "distro": {
                 "description": "Target distributions",
@@ -167,7 +164,7 @@
     "name": "poky-wrynose",
     "non-interactive-cmdline-options": [
         "poky-wrynose",
-        "poky-with-sstate",
+        "poky",
         "distro/poky",
         "machine/genericarm64"
     ],

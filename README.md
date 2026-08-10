@@ -1,4 +1,6 @@
 # REPO IN PROGRESS
+# TODO
+[] Update git tracking to match yocto way (also see Setup section)
 # Setup
 [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 ## Dependencies
@@ -18,3 +20,8 @@ git clone https://git.openembedded.org/bitbake
 ```
 git clone 
 ```
+## Setup 
+TODO something like  
+`./bitbake/bin/bitbake-setup init /path/to/your/my-project.conf.json \
+    --source-overrides /path/to/your/sources-fixed-revisions.json `
+[bitbake setup config](https://docs.yoctoproject.org/bitbake/singleindex.html#document-bitbake-user-manual/bitbake-user-manual-environment-setup)

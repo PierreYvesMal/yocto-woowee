@@ -13,3 +13,6 @@
 [submodule "layers/bitbake"]
 	path = layers/bitbake
 	url = https://git.openembedded.org/bitbake
+[submodule "layers/meta-ros"]
+	path = layers/meta-ros
+	url = https://github.com/ros/meta-ros.git

@@ -1,6 +1,10 @@
 # REPO IN PROGRESS
 # TODO
-[] Update git tracking to match yocto way (also see Setup section)
+[] Update git tracking to match yocto way (also see Setup section)  
+had to expand sd card ? didn't happen before
+sudo growpart /dev/sdc 2
+sudo e2fsck -f /dev/sdc2
+sudo resize2fs /dev/sdc2
 # Setup
 [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 ## Dependencies

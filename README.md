@@ -1,10 +1,8 @@
 # REPO IN PROGRESS
 # TODO
 [] Update git tracking to match yocto way (also see Setup section)  
-had to expand sd card ? didn't happen before
-sudo growpart /dev/sdc 2
-sudo e2fsck -f /dev/sdc2
-sudo resize2fs /dev/sdc2
+
+
 # Setup
 [Yocto Project Quick Build](https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html)
 ## Dependencies
@@ -29,3 +27,18 @@ TODO something like
 `./bitbake/bin/bitbake-setup init /path/to/your/my-project.conf.json \
     --source-overrides /path/to/your/sources-fixed-revisions.json `
 [bitbake setup config](https://docs.yoctoproject.org/bitbake/singleindex.html#document-bitbake-user-manual/bitbake-user-manual-environment-setup)
+
+# build
+```
+bitbake core-image-base
+```
+# flash
+
+[24 Creating Partitioned Images Using Wic](https://docs.yoctoproject.org/dev-manual/wic.html)
+```
+bitbake wic-native -c addto_recipe_sysroot #makes oe-run-native wic-native wic available
+umount /dev/sdc[12]
+sudo chmod a+rw /dev/sdc
+wic write tmp/deploy/images/raspberrypi5/core-image-base-raspberrypi5.rootfs.wic /dev/sdc --expand 1:0,2:29G # using the .bashrc alias wic="oe-run-native wic-native wic"
+```
+note: --expand auto not working

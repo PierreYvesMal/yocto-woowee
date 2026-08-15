@@ -1,0 +1,14 @@
+{
+    "layers": [
+        "bitbake/lib/layerindexlib/tests/testdata/layer4",
+        "bitbake/lib/layerindexlib/tests/testdata/layer1",
+        "bitbake/lib/layerindexlib/tests/testdata/layer3",
+        "bitbake/lib/layerindexlib/tests/testdata/layer2",
+        "openembedded-core/meta",
+        "openembedded-core/meta-selftest",
+        "openembedded-core/meta-skeleton",
+        "meta-yocto/meta-poky",
+        "meta-yocto/meta-yocto-bsp"
+    ],
+    "version": "1.0"
+}

@@ -16,3 +16,12 @@
 [submodule "layers/meta-ros"]
 	path = layers/meta-ros
 	url = https://github.com/ros/meta-ros.git
+[submodule "layers/meta-tanowrt"]
+	path = layers/meta-tanowrt
+	url = https://github.com/tano-systems/meta-tanowrt.git
+[submodule "layers/meta-zenoh"]
+	path = layers/meta-zenoh
+	url = https://github.com/Jarsop/meta-zenoh.git
+[submodule "layers/openembedded-core"]
+	path = layers/openembedded-core
+	url = https://git.openembedded.org/openembedded-core
